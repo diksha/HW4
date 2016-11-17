@@ -21,4 +21,4 @@ This will create containers for proxy main and redis and will also start the ser
 
 This will spawn a new server
 
-[![HW4Part1.gif](https://github.com/diksha/HW4/blob/master/screencast/HW4Part1.gif)](#HW4Part1.gif)
+![HW4Part1.gif](https://github.com/diksha/HW4/blob/master/screencast/HW4Part1.gif)
