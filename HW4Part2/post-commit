@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd /Users/dikshagohlyan/devops/Deployment/deploy/App/
+docker rmi ncsu-app
+docker rmi localhost:5000/ncsu:latest
+docker build -t ncsu-app .
+docker tag -f ncsu-app localhost:5000/ncsu:latest
+docker push localhost:5000/ncsu

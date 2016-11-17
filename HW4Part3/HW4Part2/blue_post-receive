@@ -1,0 +1,9 @@
+#!/bin/sh
+
+// GIT_WORK_TREE=/home/ubuntu/Deployment/deploy/blue-slice/ git checkout -f
+docker stop blue_app
+docker rm blue_app
+docker pull localhost:5000/ncsu:latest
+docker rmi localhost:5000/ncsu:current
+docker tag localhost:5000/ncsu:latest localhost:5000/ncsu:current
+docker run -p 50103:8080 -d --name blue_app localhost:5000/ncsu:latest

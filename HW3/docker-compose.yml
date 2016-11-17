@@ -1,0 +1,14 @@
+version: '2'
+services:
+  hw3: 
+    build: ./HW3
+    links: 
+      - redis
+    ports:
+      - 50102:3000
+  redis:
+    image: redis
+    ports: 
+      - 32800:6379
+volumes:
+  logvolume01: {}
