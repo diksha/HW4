@@ -4,11 +4,13 @@
   var fs      = require('fs')
   var app = express()
   // REDIS
-  var client = redis.createClient(32798, '192.168.2.13', {})
+  var client = redis.createClient(32800, '192.168.2.13', {})
   var httpProxy = require('http-proxy')
   var http = require('http')
 
   var proxy = httpProxy.createProxyServer({});
+client.del("queue");
+
 
   client.lpush('queue','http://192.168.2.13:50102');
 

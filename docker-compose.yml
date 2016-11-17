@@ -15,6 +15,6 @@ services:
   redis:
     image: redis
     ports: 
-      - "6379"
+      - 32800:6379
 volumes:
   logvolume01: {}

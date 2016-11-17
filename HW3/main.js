@@ -6,9 +6,8 @@ var app = express()
 var httpProxy = require('http-proxy');
 var http = require('http');
 // REDIS
-var client = redis.createClient(32795, '192.168.2.13', {})
+var client = redis.createClient(32800, '192.168.2.13', {})
 client.del("recent1");
-client.del("queue");
 // ///////////// WEB ROUTES
 // var pserver = http.createServer(function(req, res) {
 // 	client.rpoplpush('queue', 'queue', function(err, reply) {
@@ -142,10 +141,6 @@ var server = app.listen(3000, function () {
   })
 
   	var url1 = 'http://localhost:'+port
-
-	client.lpush('queue', url1, function(err, reply) {
-	  	console.log("Added url1 in queue");
-	})
 
   console.log('Example app listening at http://%s:%s', host, port)
 })
