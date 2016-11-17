@@ -17,7 +17,8 @@ This will create containers for proxy main and redis and will also start the ser
 ```node infrastructure.js```
 
 4. Spawn a new server
-```localhost:8001/spawn```
+
+``` localhost:8001/spawn ```
 
 This will spawn a new server
 
